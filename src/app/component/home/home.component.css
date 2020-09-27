@@ -1,0 +1,70 @@
+.form-width {
+  width: 450px;
+  /* max-width: 500px; */
+  /* width: 100%; */
+}
+
+.full-width {
+  width: 100%;
+}
+.card{
+  width: 450px;
+
+  /* display: flex; */
+}
+
+.cardImage{
+  max-width: 150px;
+  /* object-fit: contain; */
+  object-fit: cover;
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+
+.home-card {
+  border-radius: 4px;
+  width: 450px;
+  max-height: 1000px;
+  margin-top: 40px;
+  padding: 0;
+}
+.home-card .mat-card-image {
+  margin: 0;
+  height: 100%;
+}
+.home-card .home-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+.home-card .home-card-content > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  max-width: 50%;
+}
+.home-card .home-card-content > *:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.home-card .home-card-content > *:last-child {
+  flex-direction: column;
+  align-items: start;
+  padding: 8px;
+}
+
+.details-margin > div{
+  margin-bottom: 1rem !important;
+}
+
+.align-center{
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  margin-top: 2rem;
+}

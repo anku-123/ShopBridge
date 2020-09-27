@@ -1,0 +1,16 @@
+<div class="align-center">
+<div *ngIf = "listStatus">
+  <mat-card class="home-card">
+    <mat-card-content class="home-card-content">
+    <img class="cardImage" mat-card-image  src="{{product.image}}" alt="Product Image" >
+
+      <div class="details-margin">
+        <div><strong>Name: {{product.name}}</strong></div>
+        <div><strong>Price: {{product.price}}</strong></div>
+        <div>Description: {{product.description}}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+</div>

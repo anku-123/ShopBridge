@@ -1,0 +1,61 @@
+<div class="align-center">
+<div>
+  <form [formGroup] = "itemForm" (ngSubmit) = "submit()" class="form-width" *ngIf="showForm">
+
+  <mat-form-field appearance="fill" class="full-width">
+  <mat-label>Name</mat-label>
+  <input matInput type="text" formControlName = "name">
+</mat-form-field>
+
+<br>
+
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+
+  <mat-label>Price</mat-label>
+  <input matInput type = "number" formControlName = "price">
+  <span matPrefix>₹&nbsp;</span>
+  <span matSuffix>.00</span>
+</mat-form-field>
+</div>
+<br>
+<div>
+  <mat-form-field appearance="fill" class="full-width">
+
+  <mat-label>Description</mat-label>
+  <textarea matInput rows="4" cols="50" formControlName = "description"></textarea>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill" class="full-width">
+  <mat-label>Image URL</mat-label>
+  <input matInput type="text" formControlName = "image" placeholder="Image Path/Link">
+</mat-form-field>
+</div>
+ <br>
+<button [disabled]="itemForm.invalid" type ="submit" mat-raised-button color="primary" > Add Item </button>
+  </form>
+  </div>
+<br>
+
+
+<div *ngIf = "listStatus">
+  <mat-card (click)="displayDetails(item.id)" *ngFor = "let item of products" class="home-card">
+    <mat-card-content class="home-card-content">
+    <img class="cardImage" mat-card-image  src="{{item.image}}" alt="Product Image" >
+
+      <div class="details-margin">
+        <div><strong>Name: {{item.name}}</strong></div>
+        <div><strong>Price: {{item.price}}</strong></div>
+        <div>Description: {{item.description}}</div>
+      <button mat-mini-fab color="primary" mat-button (click)="deleteProduct(item.id)"> <mat-icon> delete</mat-icon></button>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+</div>
+
+
